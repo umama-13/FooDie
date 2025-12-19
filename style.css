@@ -1,0 +1,211 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  transition:all 0.3s ease;
+}
+body {
+  background:#000;
+  color:#fff;
+  line-height:1.5;
+  scroll-behavior:smooth;
+}
+a {
+  text-decoration:none;
+  color:inherit;
+}
+a:hover {
+  color:#f54627;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background:#111;
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.logo {
+  font-size:28px;
+  font-weight:bold;
+  color:#fb4322;
+}
+nav ul {
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+nav li {
+  position:relative;
+}
+.menu-toggle {
+  display:none;
+  font-size:28px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+nav a {
+  font-weight:600;
+  font-size:16px;
+}
+nav a:hover {
+  letter-spacing:1px;
+}
+.hero {
+  position:relative;
+  text-align:center;
+  color:#fff;
+  background:url('https://media.istockphoto.com/id/617759204/photo/steakhouse-double-bacon-cheeseburger.jpg?s=612x612&w=0&k=20&c=QRaHtrxJsmNKOlOTkvxyE-o-3kM-Me1zU320yPT8ycI=') no-repeat center/cover; 
+  padding:150px 20px;
+}
+.hero h1 {
+  font-size:50px;
+  max-width:700px;
+  margin:0 auto;
+}
+.hero h1:hover {
+  transform:scale(1.05);
+  color:#ea2c0b;
+}
+.btn {
+  display:inline-block;
+  padding:10px 16px;
+  background:#ea2c0b;
+  color:white;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:14px;
+  transition:all 0.3s ease;
+}
+.btn:hover {
+  background:#000;
+  color:#ea2c0b;
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(255,90,60,0.5);
+}
+.section {
+  padding:60px 20px;
+}
+.section h1 {
+  font-size:30px;
+  margin-bottom:20px;
+  position:relative;
+  display:inline-block;
+}
+.section h1::after {
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:#ea2c0b;
+  transition:width .3s;
+}
+.section h1:hover::after {
+  width:60%;
+}
+
+.section h2:hover {
+  transform:scale(1.05);
+  color:#ea2c0b;
+}
+
+.grid {
+  display:grid;
+  gap:15px;
+}
+
+
+/* Our Menu - ab Gallery jaisa chhota */
+.menu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.specials-grid {
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+.testimonials-grid {
+  grid-template-columns:repeat(auto-fit,minmax(160px, 1fr));
+}
+.events-grid {
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+.team-grid {
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+}
+
+
+/* Gallery - thoda bada */
+.gallery-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+
+.card {
+  background:#111;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(255,165,0,0.1);
+  cursor:pointer;
+  transition:all 0.3s;
+  font-size:14px;
+}
+.card img {
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  transition:all 0.35s ease;
+}
+.card:hover img {
+  transform:scale(1.05);
+}
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(255,165,0,0.5);
+  border:2px solid #ea2c0b ;
+}
+.card-content {
+  padding:10px;
+}
+footer {
+  padding:80px 20px;
+  background:#111;
+  color:white;
+  text-align:center;
+}
+footer a {
+  color:white;
+  margin:0 8px;
+}
+footer:hover {
+  background:#ea2c0b;
+  color:#000;
+}
+@media(max-width:900px){
+  nav ul {
+    display:none;
+    flex-direction:column;
+    background:#111;
+    position:absolute;
+    top:70px;
+    right:20px;
+    padding:15px;
+    border-radius:10px;
+  }
+  .menu-toggle {
+    display:block;
+  }
+}
+input,button,textarea {
+  font-family:inherit;
+  font-style:italic;
+}
